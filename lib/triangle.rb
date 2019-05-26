@@ -7,6 +7,17 @@ class Triangle
     @side_three = num3
   end
 
+  def equilateral?
+    if @side_one == @side_two && @side_three
+      true
+    else
+      false
+    end
+  end
+
   def kind
+    if @side_one + @side_two <= @side_three
+      #error
+    else if
   end
 end
