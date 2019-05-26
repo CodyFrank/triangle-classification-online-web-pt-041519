@@ -16,7 +16,7 @@ class Triangle
   end
 
   def isosceles?
-    if @side_one == @side_two || @side_three == @side_one
+    if @side_one == @side_two || @side_three == @side_one || @side_two == @side_three
       true
     else
       false
