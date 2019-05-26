@@ -48,6 +48,7 @@ class Triangle
         raise TriangleError
       rescue TriangleError => error
         puts error.message
+      end
     elsif equilateral?
       :equilateral
     elsif isosceles?
@@ -58,5 +59,8 @@ class Triangle
   end
 
   class TriangleError < StandardError
+    def message
+      "This is a Triangle Error message"
+    end
   end
 end
