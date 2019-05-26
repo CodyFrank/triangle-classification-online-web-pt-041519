@@ -24,7 +24,7 @@ class Triangle
   end
 
   def scalene?
-    if @side_one != @side_two || @side_three
+    if @side_one != @side_two && @side_three
       if @side_two != @side_three
         true
       end
