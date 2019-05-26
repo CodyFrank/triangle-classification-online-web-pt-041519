@@ -33,9 +33,21 @@ class Triangle
     end
   end
 
+  def valid?
+    if @side_one + @side_two > @side_three && @side_three + @side_one > @side_two
+      true
+    else
+      false
+    end
+  end
+
   def kind
-    if @side_one + @side_two <= @side_three
-      #error
-    else if
+    if scalene?
+      :scalene
+    elsif isosceles?
+      :isosceles
+    elsif equilateral?
+      :equilateral
+    end
   end
 end
