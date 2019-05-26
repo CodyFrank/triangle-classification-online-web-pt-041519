@@ -1,5 +1,5 @@
 class Triangle
-  attr_reader :side_one, :side_two, :side_three
+  attr_accessor :side_one, :side_two, :side_three
 
   def initialize (num1, num2, num3)
     @side_one = num1.to_f
@@ -45,11 +45,7 @@ class Triangle
 
   def kind
     if valid? == false
-      begin
-        raise TriangleError
-      rescue TriangleError => error
-        puts error.message
-      end
+      raise TriangleError
     elsif equilateral?
       :equilateral
     elsif isosceles?
