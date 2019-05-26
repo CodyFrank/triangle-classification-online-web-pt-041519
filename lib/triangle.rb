@@ -36,7 +36,7 @@ class Triangle
     if @side_one + @side_two > @side_three && @side_three + @side_one > @side_two
       if @side_one > 0 && @side_two > 0
         if @side_three > 0
-          valid = true\
+          valid = true
         end
       end
     end
