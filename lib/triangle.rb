@@ -15,9 +15,19 @@ class Triangle
     end
   end
 
-  def scalene?
+  def isosceles?
     if @side_one == @side_two || @side_three
       true
+    else
+      false
+    end
+  end
+
+  def scalene?
+    if @side_one != @side_two || @side_three
+      if @side_two != @side_three
+        true
+      end
     else
       false
     end
