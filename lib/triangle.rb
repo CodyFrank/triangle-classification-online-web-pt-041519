@@ -42,12 +42,12 @@ class Triangle
   end
 
   def kind
-    if scalene?
-      :scalene
+    if equilateral?
+      :equilateral
     elsif isosceles?
       :isosceles
-    elsif equilateral?
-      :equilateral
+    elsif scalene?
+      :scalene
     end
   end
 end
