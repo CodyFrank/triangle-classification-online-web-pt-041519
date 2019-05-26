@@ -36,8 +36,8 @@ class Triangle
       if @side_one > 0 && @side_two > && @side_three > 0
         true
       end
-    else false
     end
+  else false
   end
 
   def kind
