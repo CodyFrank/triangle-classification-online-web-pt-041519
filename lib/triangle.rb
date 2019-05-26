@@ -43,15 +43,14 @@ class Triangle
   end
 
   def kind
-    if valid?
-      if equilateral?
-        :equilateral
-      elsif isosceles?
-        :isosceles
-      elsif scalene?
-        :scalene
-      else
-        raise TriangleError
+    if valid? == false
+      raise TriangleError
+    elsif equilateral?
+      :equilateral
+    elsif isosceles?
+      :isosceles
+    elsif scalene?
+      :scalene
       end
     end
   end
