@@ -50,7 +50,12 @@ class Triangle
         :isosceles
       elsif scalene?
         :scalene
+      else
+        raise TriangleError
       end
     end
+  end
+
+  class TriangleError < StandardError
   end
 end
