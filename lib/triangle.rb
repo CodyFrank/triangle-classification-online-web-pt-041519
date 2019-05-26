@@ -44,7 +44,10 @@ class Triangle
 
   def kind
     if valid? == false
-      raise TriangleError
+      begin
+        raise TriangleError
+      rescue TriangleError => error
+        puts error.message
     elsif equilateral?
       :equilateral
     elsif isosceles?
