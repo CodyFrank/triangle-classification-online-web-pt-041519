@@ -8,7 +8,7 @@ class Triangle
   end
 
   def equilateral?
-    if @side_one == @side_two && @side_three = @side_one
+    if @side_one == @side_two && @side_three == @side_one
       true
     else
       false
