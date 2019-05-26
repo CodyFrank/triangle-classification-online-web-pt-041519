@@ -15,6 +15,14 @@ class Triangle
     end
   end
 
+  def scalene?
+    if @side_one == @side_two || @side_three
+      true
+    else
+      false
+    end
+  end
+
   def kind
     if @side_one + @side_two <= @side_three
       #error
