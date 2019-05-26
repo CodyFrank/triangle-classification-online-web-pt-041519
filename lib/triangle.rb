@@ -33,11 +33,11 @@ class Triangle
 
   def valid?
     valid = true
-    if @side_one + @side_two <= @side_three && @side_three + @side_one <= @side_two
+    if @side_one + @side_two <= @side_three || @side_three + @side_one <= @side_two
       valid = false
-    elsif @side_one >= 0 && @side_two >= 0
+    elsif @side_one <= 0 && @side_two <= 0
       valid = false
-    elsif @side_three >= 0
+    elsif @side_three <= 0
       valid = false
     end
     return valid
