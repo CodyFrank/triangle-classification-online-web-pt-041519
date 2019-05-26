@@ -33,7 +33,11 @@ class Triangle
 
   def valid?
     valid = true
-    if @side_one + @side_two <= @side_three || @side_three + @side_one <= @side_two
+    if @side_one + @side_two <= @side_three 
+      valid = false
+    elsif @side_three + @side_one <= @side_two
+      valid = false
+    elsif @side_three + @side_two <= @side_one
       valid = false
     elsif @side_one <= 0 && @side_two <= 0
       valid = false
@@ -52,8 +56,6 @@ class Triangle
       :isosceles
     elsif scalene?
       :scalene
-    else
-      raise TriangleError
     end
   end
 
